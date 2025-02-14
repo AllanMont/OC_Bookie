@@ -14,6 +14,29 @@ a{
 li{
     list-style-type: none;
 }
+
+.logo_main {
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.main-container {
+	@media screen and (min-width: 1025px) {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+
+
+}
+
 /* Entête du site contenant le logo et le menu de navigation */
     /* Logo */
     header{
@@ -145,7 +168,7 @@ li{
             padding-left: 35px;
         }
         .aspect_filtres:hover, .aspect_filtres:focus, .aspect_filtres:active{
-            color: #0065FC;
+            background-color: #DEEBFF;
             cursor: pointer;
         }
         .icone_filtres{
@@ -153,7 +176,6 @@ li{
             height: 47px;
             font-size: 20px;
             color: #0065FC;
-            background-color: #DEEBFF;
             border-radius: 50%;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -164,11 +186,17 @@ li{
             margin-top: -13px;
         }
         .fa-money-bill-wave{
-            padding-left: 13px; /* pour recentrer le billet qui est plus large que les autres icônes */
+            padding-left: 18px; /* pour recentrer le billet qui est plus large que les autres icônes */
         }
         .fa-child-reaching{
-            padding-left: 17px; /* pour recentrer l'enfant qui est plus fin que les autres icônes */
+            padding-left: 23px; /* pour recentrer l'enfant qui est plus fin que les autres icônes */
         }
+	.fa-heart{
+		padding-left:26px;
+	}
+	.fa-fire{
+		padding-left:20px;
+	}
         #filtres p{
             padding-left: 10px;
         }
@@ -271,8 +299,8 @@ li{
                 margin-top: 132px;
             }
             .titre_hebergements{
-                font-weight: 750;
-                font-size: 1.13vmax;
+                font-weight: 700;
+                font-size: 16;
                 object-fit: fill;
                 white-space: nowrap;
             }
@@ -489,23 +517,18 @@ li{
     li.liens_footer:hover a, li.liens_footer:focus a, li.liens_footer:active a{
         font-weight: 600;  
     }
-/* Breakpoints, convenu avec le designer UI : 992px pour les écrans d'ordinateur et 768px pour les tablettes */
+/* Breakpoints, convenu avec le designer UI : 1399px pour les écrans d'ordinateur et 768px pour les tablettes */
 
-@media screen and (min-width: 993px) {
-    /**version desktop à partir de 993px car breakpoint souhaité 992px**/
+@media screen and (min-width: 1024px) {
 /* Main - corps de la page */
     /* Partie Recherche */
-        /* on masque le bouton loupe pour mobile, à partir de 993px et + / 
-        si on le met dans le code général, le bouton loupe n'apparaît jamais */
         .bouton_rechercher_mobile{
         display: none;
         }
 }
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    /**version tablette entre 769px et 992px **/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 /* Main - corps de la page */
     /* Partie Recherche */
-        /* on masque le bouton loupe pour mobile, entre 769px et 992px */
         .bouton_rechercher_mobile{
             display: none;
         }
@@ -519,7 +542,7 @@ li{
             margin-left: -86px;
         }
         #filtres_categories > *:first-child{
-            margin-left: 20px;
+            margin-left: 0px;
         }
         #filtres_categories :nth-child(3){
             margin-right: 20px;
@@ -567,8 +590,7 @@ li{
             margin-right: 20px;
         }
 }
-@media screen and (min-width: 357px) and (max-width: 768px) {
-    /** version mobile entre 357px et 768px **/
+@media screen and (min-width: 320px) and (max-width: 767px) {
 /* Entête du site contenant le logo et le menu de navigation */
     /* logo */
     header{
@@ -615,7 +637,7 @@ li{
             display: none
         }
         /* Affichage du bouton loupe pour mobile */
-        .bouton_rechercher_mobile {
+        .bouton_rechercher_mobile {f#filtres_categories
             background-color: #0065FC;
             color: white;
             border: none;
@@ -649,9 +671,6 @@ li{
             flex-direction: row;
             flex-wrap: wrap;
             margin-right: 16px;
-        }
-        #filtres_categories > *:first-child, #filtres_categories > *:nth-child(2), #filtres_categories > *:nth-child(3){
-            margin-right: -23px;
         }
         .aspect_filtres{
             margin-bottom: 20px;
@@ -800,7 +819,7 @@ li{
         padding-right: 25px;
     }
 }
-@media screen and (max-width: 356px) {
+@media screen and (max-width: 767px) {
 /* Entête du site contenant le logo et le menu de navigation */
     /* logo */
     /* Pour garder une position centrée du logo */
@@ -841,7 +860,7 @@ li{
     .bouton_rechercher_desktop_tablette{
         display: none
     }
-    /* Affichage du bouton loupe pour mobile */
+    /* Affichage du bouton loupe pour mobile */f
     .bouton_rechercher_mobile {
         background-color: #0065FC;
         color: white;
@@ -880,6 +899,7 @@ li{
         .aspect_filtres{
             margin-bottom: 10px;
             margin-left: 0px;
+	    width: 162px;
         }
         /* Partie info */
         #info{
@@ -955,7 +975,7 @@ li{
         margin-bottom: 6px;
     }
     .titre_selection_populaires{
-        font-size: 2.5vmax;
+        font-size: 16px;
     }
     .prix_selection_populaires{
         font-size: 2.1vmax;
@@ -1016,3 +1036,73 @@ li{
         padding-right: 25px;
     }
 }
+
+.activity_container {
+  padding-top: 65px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.activities {
+  display: flex;
+	@media screen and (max-width: 1024px) {
+      		flex-direction: column;
+	}
+
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 20px 20px;
+
+	@media screen and (max-width: 1024px) {
+      		margin: 7px 0;
+	}
+}
+
+.activity > img {
+	@media screen and (min-width: 1025px) {
+      		width: 300px;
+   		height: 380px;
+	}
+
+	@media screen and (max-width: 1024px) {
+      		width: 193px;
+   		height: 200px;
+	}
+
+	@media screen and (max-width: 1025px) {
+      		width: 100%;
+   		height: 141px;
+	}
+
+
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;  
+}
+
+.activity_text {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+	@media screen and (min-width: 1025px) {
+      		font-size: 16px;
+	}
+
+	@media screen (min-width: 768px) and (max-width: 1024px) {
+      		font-size: 12px;
+	}
+  
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  height: 60px;
+  padding-left: 19px;
+}
+
+
+
+
