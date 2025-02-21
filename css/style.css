@@ -6,7 +6,10 @@
 }
 body{
     min-width: 320px;
+    max-width:1440px; 
+    margin: auto;
 }
+
 a{
     text-decoration:none;
     color: black;
@@ -15,27 +18,27 @@ li{
     list-style-type: none;
 }
 
-.logo_main {
-	@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+	.logo_main {
 		display: flex;
 		justify-content: center;
 	}
 }
 
-.main-container {
-	@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
+	.main-container {
 		margin-left: 50px;
 		margin-right: 50px;
 	}
-
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		margin-left: 50px;
-		margin-right: 50px;
-	}
-
-
-
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.main-container {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}
+
 
 /* Entête du site contenant le logo et le menu de navigation */
     /* Logo */
@@ -140,6 +143,9 @@ li{
             padding-left: 18px;
             border-radius: 18px 0px 0px 18px;
         }
+	.fa-chart-line {
+	  color: #0065fc;
+	}
     /* Partie filtres et info */
         #filtres_info{
             padding-left: 46px;
@@ -300,7 +306,7 @@ li{
             }
             .titre_hebergements{
                 font-weight: 700;
-                font-size: 16;
+                font-size: 16px;
                 object-fit: fill;
                 white-space: nowrap;
             }
@@ -637,16 +643,16 @@ li{
             display: none
         }
         /* Affichage du bouton loupe pour mobile */
-        .bouton_rechercher_mobile {f#filtres_categories
-            background-color: #0065FC;
-            color: white;
-            border: none;
-            border-radius: 16px 16px 16px 16px;
-            padding-left: 19px;
-            padding-right: 19px;
-            position: relative;
-            right: 15px;
-        }
+  .bouton_rechercher_mobile {
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding-left: 19px;
+    padding-right: 19px;
+    position: relative;
+    right: 15px;
+}
         .bouton_rechercher_mobile:hover, .bouton_rechercher_mobile:focus, .bouton_rechercher_mobile:active{
             border: 1px solid #DEEBFF;
             cursor: pointer;
@@ -899,7 +905,7 @@ li{
         .aspect_filtres{
             margin-bottom: 10px;
             margin-left: 0px;
-	    width: 162px;
+	    min-width: 40%;
         }
         /* Partie info */
         #info{
@@ -1044,63 +1050,70 @@ li{
 }
 
 .activities {
+  gap: 20px;
   display: flex;
-	@media screen and (max-width: 1024px) {
-      		flex-direction: column;
-	}
-
   justify-content: space-between;
   padding-top: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .activities {
+    flex-direction: column;
+  }
+}
+
 .activity {
   display: flex;
+  flex: 1;
   flex-direction: column;
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 20px 20px;
+}
 
-	@media screen and (max-width: 1024px) {
-      		margin: 7px 0;
-	}
+@media screen and (max-width: 1024px) {
+  .activity {
+    margin: 7px 0;
+  }
 }
 
 .activity > img {
-	@media screen and (min-width: 1025px) {
-      		width: 300px;
-   		height: 380px;
-	}
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
 
-	@media screen and (max-width: 1024px) {
-      		width: 193px;
-   		height: 200px;
-	}
+@media screen and (min-width: 1025px) {
+  .activity > img {
+    height: 380px;
+  }
+}
 
-	@media screen and (max-width: 1025px) {
-      		width: 100%;
-   		height: 141px;
-	}
-
-
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;  
+@media screen and (max-width: 1024px) {
+  .activity > img {
+    height: 200px;
+  }
 }
 
 .activity_text {
   display: flex;
   align-items: center;
   font-weight: 700;
-	@media screen and (min-width: 1025px) {
-      		font-size: 16px;
-	}
-
-	@media screen (min-width: 768px) and (max-width: 1024px) {
-      		font-size: 12px;
-	}
-  
   background-color: white;
   border-radius: 0 0 20px 20px;
   height: 60px;
   padding-left: 19px;
+}
+
+@media screen and (min-width: 1025px) {
+  .activity_text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .activity_text {
+    font-size: 12px;
+  }
 }
 
 
