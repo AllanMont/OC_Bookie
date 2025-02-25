@@ -350,7 +350,6 @@ li{
                 position: relative;
                 display: flex;
                 background-color: white;
-                height: 142px;
                 border-radius: 20px;
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -552,9 +551,6 @@ li{
         }
         #filtres_categories :nth-child(3){
             margin-right: 20px;
-        }
-        #filtres_categories > *:last-child{
-            margin-left: 20px;
         }
         .aspect_filtres{
             margin-bottom: 20px;
@@ -1116,6 +1112,24 @@ li{
   }
 }
 
+	.half_filtres {
+	  display: flex;
+	  flex-direction: row;
+	}
 
+@media screen and (max-width: 767px) {
+        .half_filtres {
+	  flex-direction: column;
+	}
+}
 
+@media screen and (max-width: 1024px) {
+	.half_filtres {
+	  width: 100%;
+	}
 
+	.aspect_filtres {
+	    flex: 1;
+	    margin-left: 5px;
+	}
+}
